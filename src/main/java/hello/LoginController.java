@@ -8,23 +8,30 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
-@RequestMapping("/login")
-public class LoginController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String afficher(final ModelMap pModel,
-            @RequestParam(value="login") final String pLogin)  {
-        pModel.addAttribute("login", pLogin);
+public class LoginController {
+    @RequestMapping(value="/login",method = RequestMethod.GET)
+    public String afficher(final ModelMap pModel) {
         return "login";
     }
-    
+
+    @RequestMapping(value="/login/particulier",method = RequestMethod.GET)
+    public String login_particuliuer(final ModelMap pModel) {
+        return "login_particulier";
+    }
+
+    @RequestMapping(value="/login/conseiller",method = RequestMethod.GET)
+    public String login_conseiller(final ModelMap pModel) {
+        return "login_conseiller";
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public String afficher2(final ModelMap pModel,
-            @RequestParam(value="login") final String pLogin,
-            @RequestParam(value="password") final String pPassword) {
+            @RequestParam(value = "login") final String pLogin,
+            @RequestParam(value = "password") final String pPassword) {
         pModel.addAttribute("login", pLogin);
         pModel.addAttribute("password", pPassword);
-        getWeirdThings();
+        //getWeirdThings(); // fake API call
         return "afficher";
     }
     

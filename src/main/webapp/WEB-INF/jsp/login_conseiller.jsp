@@ -33,31 +33,23 @@
         <br>
 
         <div class="container">
+            <div class="card" style="width: 50%;margin-left:25%">
 
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4">
-                    <div class="card" style="width: 100%">
-                        <img class="card-img-top" src="https://png.pngtree.com/svg/20170602/user_circle_1048392.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align:center">Particulier</h5>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input name="login" type="email" class="form-control"  placeholder="*****@ynovbank.com">
 
-                            <a href="login/particulier" class="btn btn-primary"style="margin-left:35%">Connection</a>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card" style="width: 100%">
-                        <img class="card-img-top" src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align:center">Conseiller</h5>
-                            <a href="login/conseiller" class="btn btn-primary" style="margin-left:35%">Connection</a>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mot de passe</label>
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="*******">
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-2"></div>
+                        <button type="submit" class="btn btn-primary">Connection</button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
